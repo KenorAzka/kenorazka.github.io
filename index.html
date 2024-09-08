@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <img src="icon.png" alt="icon.png">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section id="home" class="main-section">
+        <div class="container">
+            <div class="text">
+                <h1 class="typed">Hello, I'm <span>Azka Ardhani<br>Setyawan</span></h1>
+                <p>This is a showcase of my work <br> as a Web Designer, Photographer, and Creative <br> Director.</p>
+                <a href="#contact" class="btn">Download CV</a>
+            </div>
+            <div class="image">
+                <img src="cob.png" alt="">
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="container">
+            <div class="about">
+                <img src="about.jpg" alt="">
+                <div class="isi-about">
+                    <h2>About Me</h2>
+                    <button id="toggleButton">Baca Selengkapnya</button>
+                    <p id="text" class="collapsed">
+                        Saya adalah pelajar yang mendalami pemrograman, dengan fokus pada Pemrograman web dan aplikasi. 
+                        Saya bersemangat untuk belajar dan mengembangkan keterampilan melalui berbagai proyek. 
+                        Selamat datang di portofolio saya, tempat saya berbagi karya dan perjalanan belajar saya.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>My Service</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Pembuatan Blog</h3>
+                    <p>Saya menyediakan layanan pembuatan blog dengan desain yang menarik dan fungsionalitas yang optimal.</p>
+                </div>
+                <div class="service">
+                    <h3>WordPress</h3>
+                    <p>Saya juga ahli dalam mengembangkan situs WordPress, mulai dari instalasi hingga pengelolaan konten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="pengalaman">
+    <h2>My Experience</h2>
+    <div class="pengalaman-list">
+        <div class="pengalaman-item" id="wordpress">
+            <h3><a href="https://jasawebsitesukoharjoo.wordpress.com/" target="_blank">WordPress</a></h3>
+            <p>Pengalaman saya dalam mengembangkan situs WordPress.</p>
+        </div>
+        <div class="pengalaman-item" id="blogger">
+            <h3><a href="https://jasawebsitesukoharjoo.blogspot.com/" target="_blank">Blogger</a></h3>
+            <p>Pengalaman saya dalam mengelola blog menggunakan Blogger.</p>
+        </div>
+        <div class="pengalaman-item" id="wid">
+            <h3><a href="https://kerensetyawana.wixsite.com/jasa-pembuatan-websi" target="_blank">Wix</a></h3>
+            <p>Pengalaman saya dalam membuat dan mengelola website menggunakan Wix.</p>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to contact me through the following:</p>
+        <div class="contact-info">
+            <p><strong>Phone:</strong> <a href="https://wa.me/0882005641003">+62 882 0056 41003</a></p>
+            <p><strong>Email:</strong> <a href="mailto:kerensetyawana@gmail.com">azka@gmail.com</a></p>
+        </div>
+    </div>
+</section>
+<!-- Footer Section -->
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Azka Ardhani Setyawan. All Rights Reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://instagram.com/azkdhni" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/in/azka-ardhani-setyawan" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/kenzz77" target="_blank">Twitter</a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+            }
+        });
+
+        const toggleButton = document.getElementById('toggleButton');
+        const text = document.getElementById('text');
+
+        toggleButton.addEventListener('click', () => {
+            text.classList.toggle('collapsed');
+            text.classList.toggle('expanded');
+
+            if (text.classList.contains('expanded')) {
+                toggleButton.textContent = 'Baca Lebih Sedikit';
+            } else {
+                toggleButton.textContent = 'Baca Selengkapnya';
+            }
+        });
+    </script>
+</body>
+</html>
