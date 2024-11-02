@@ -450,7 +450,7 @@ main {
     width: 500px;
     height: 100% !important;
     border-radius: 20px;
-    filter: brightness(1.25);
+    filter: contrast(1.5);
 }
 
 .containeer {
